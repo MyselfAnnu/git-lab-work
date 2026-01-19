@@ -1,0 +1,33 @@
+========== AWS CLI ============
+
+
+Link to download AWS CLI version for Windows, Linux & Mac.
+
+
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+=================================================
+
+============== Basic Commands ===================
+
+#aws configure (CLI login command)
+
+After typing this command you need to copy paste 
+
+- Access key
+- Sec Access key
+- Region (code)
+- output
+
+After typing above information if user have S3 full access (S3 full permission) you can executive following commands.
+
+#aws s3 ls (get the bucket list)
+ 
+
+#aws s3 mb s3://123abcd (create Bucket)
+
+#aws s3 rb s3://“Bucket name” (delete bucket)
+
+#aws s3 sync . S3://“bucket name” (sync folder data from s3 to local) Upload
+
+#aws s3 sync s3://“Bucket name” . (sync s3 data to local)
