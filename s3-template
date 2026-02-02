@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: CloudFormation template to create an S3 bucket in AWS Mumbai region (ap-south-1)
+
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: my-s3-bucket-mumbai-123456
+      VersioningConfiguration:
+        Status: Enabled
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        RestrictPublicBuckets: true
+
+Outputs:
+  BucketName:
+    Description: Name of the S3 bucket
+    Value: !Ref MyS3Bucket
